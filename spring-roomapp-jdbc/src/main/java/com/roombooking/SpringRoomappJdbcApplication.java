@@ -8,7 +8,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.roombooking.model.Room;
-import com.roombooking.model.RoomCategory;
 import com.roombooking.model.RoomType;
 import com.roombooking.service.IRoomService;
 
@@ -60,7 +59,7 @@ public class SpringRoomappJdbcApplication implements CommandLineRunner{
 		System.out.println();
 		
 		System.out.println("Based on start date, category and type");
-		iRoomService.getByAvailabilityAndType(LocalDate.of(2022, 9, 24), "AC", "Standard").forEach(System.out::println);
+		iRoomService.getByAvailabilityAndType(LocalDate.of(2022, 10, 10),"AC",RoomType.STANDARD.type).forEach(System.out::println);
 		System.out.println();
 		
 	}
